@@ -58,7 +58,7 @@ function go_tools() {
 	#
 	# /dl/go1.15.linux-386.tar.gz
 	#
-	DL_PATH_URL="$(wget --no-check-certificate -qO- https://golang.org/dl/ | grep -oP '\/dl\/go([0-9\.]+)\.linux-386\.tar\.gz' | head -n 1)"
+	DL_PATH_URL="$(wget --no-check-certificate -qO- https://go.dev/dl/ | grep -oP '\/dl\/go([0-9\.]+)\.linux-386\.tar\.gz' | head -n 1)"
 
 	latest="$(echo $DL_PATH_URL | grep -oP 'go[0-9\.]+' | grep -oP '[0-9\.]+' | head -c -2)"
 
